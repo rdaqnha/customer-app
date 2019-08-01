@@ -1,0 +1,30 @@
+[1mdiff --git a/src/App.js b/src/App.js[m
+[1mindex 8d2adf6..a7ea024 100644[m
+[1m--- a/src/App.js[m
+[1m+++ b/src/App.js[m
+[36m@@ -1,14 +1,11 @@[m
+ import React, {Component} from 'react';[m
+[31m-import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';[m
+[32m+[m[32mimport { BrowserRouter as Router, Route, Switch } from 'react-router-dom';[m
+ import './App.css';[m
+ import HomeContainer from './containers/HomeContainer';[m
+[32m+[m[32mimport CustomersContainer from './containers/CustomersContainer';[m
+ [m
+ class App extends Component {[m
+ [m
+[31m-  renderHome = () => <h1>Home</h1>;[m
+[31m-[m
+[31m-  renderCustomerContainer = () => <h1>Customer Container</h1>;[m
+[31m-[m
+   renderCustomerListContainer = () => <h1>Customer List Container</h1>;[m
+ [m
+   renderCustomerNewContainer = () => <h1>Customer New Container</h1>;[m
+[36m@@ -19,7 +16,7 @@[m [mclass App extends Component {[m
+       <Router>[m
+         <div>[m
+           <Route exact path="/" component={HomeContainer} />[m
+[31m-          <Route exact path="/customers" component={this.renderCustomerListContainer} />[m
+[32m+[m[32m          <Route exact path="/customers" component={CustomersContainer} />[m
+           <Switch>[m
+             <Route path="/customers/new" component={this.renderCustomerNewContainer} />[m
+             <Route path="/customers/:dni" component={this.renderCustomerContainer} />[m

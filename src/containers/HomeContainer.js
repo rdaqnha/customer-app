@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import AppFrame from '../components/AppFrame';
 import CustomerActions from '../components/CustomerActions';
 
@@ -26,10 +25,6 @@ class HomeContainer extends Component {
             </div>
         );
     }
-};
-
-HomeContainer.propTypes = {
-
 };
 
 export default HomeContainer;

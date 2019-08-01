@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const CustomerListItem = ({name, editAction, delAction, urlPath, dni}) => {
     return (
         <div>
-            <div className="cursomers-list-item">
+            <div className="customers-list-item">
                 <div className="field">
                     <Link to={`${urlPath}${dni}`}>{name}</Link>
                 </div>
@@ -25,7 +25,7 @@ CustomerListItem.propTypes = {
     editAction: PropTypes.string.isRequired,
     delAction: PropTypes.string.isRequired, 
     urlPath: PropTypes.string.isRequired, 
-    dni: PropTypes.number.isRequired, 
+    dni: PropTypes.string.isRequired, 
 };
 
 export default CustomerListItem;
