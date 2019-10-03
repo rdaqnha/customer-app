@@ -13,8 +13,10 @@ import { getCustomers } from '../selectors/customers';
 class CustomersContainer extends Component {
 
     componentDidMount(){
-        const { fetchCustomers } = this.props;
-        fetchCustomers();
+        const { fetchCustomers, customers } = this.props;
+        if(customers.length === 0) {
+            fetchCustomers();
+        }
     }
 
     handleAddNew = () => {
@@ -25,7 +27,7 @@ class CustomersContainer extends Component {
         <div>
             <CustomerList 
                 customers={customers} 
-                urlPath={'customer/'} 
+                urlPath={'customers/'} 
             />
             <CustomerActions>
                 <button onClick={this.handleAddNew}>Nuevo Cliente</button>

@@ -1,21 +1,31 @@
 {
   "customers": [
     {
-        "dni": "343423432",
-        "name": "Manolo García Pio",
-        "age": 23
+      "id": "3442323431",
+      "dni": "3442323773",
+      "name": "Paco Nuñez",
+      "age": 36
     },
     {
-        "dni": "344233432",
-        "name": "Paco Nuñez",
-        "age": 35
+      "id": "534342345",
+      "dni": "534342345",
+      "name": "Jose Blanco",
+      "age": 56
     },
     {
-        "dni": "5343423432",
-        "name": "Jose Blanco",
-        "age": 56
+      "user": {
+        "permissions": [
+          "CUSTOMER_LIST",
+          "CUSTOMER_VIEW",
+          "CUSTOMER_EDIT"
+        ]
+      },
+      "name": "NUEVO",
+      "dni": "88888888",
+      "age": 24,
+      "id": "_8ngTo4"
     }
-],
+  ],
   "posts": [
     {
       "id": 1,

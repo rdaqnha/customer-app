@@ -15,7 +15,7 @@ class HomeContainer extends Component {
                     header='Home'
                     body={
                         <div>
-                            Esta es la pantalla inicial
+                            <img src="../resources/area-clientes.jpg" alt="area-clientes"/>
                             <CustomerActions>
                                 <button onClick={this.handleOnClick}>Listado de clientes</button>
                             </CustomerActions>

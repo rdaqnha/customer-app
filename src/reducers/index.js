@@ -1,6 +1,16 @@
 import { combineReducers } from 'redux';
 import { customers } from './customers';
+import { reducer as reduxForm } from 'redux-form';
+import { CUSTOMER_LIST, CUSTOMER_VIEW, CUSTOMER_EDIT } from '../constants/permisions';
+
+const user = (state, action) => (
+    {
+        permissions: [CUSTOMER_LIST, CUSTOMER_VIEW, CUSTOMER_EDIT]
+    }
+);
 
 export default combineReducers({
-    customers
+    customers,
+    form: reduxForm,
+    user
 });

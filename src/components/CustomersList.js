@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CustomerListItem from './CustomerListItem';
+import { accessControl } from '../helpers/accessControl';
+import { CUSTOMER_LIST } from '../constants/permisions';
 
 const CustomersList = ({customers, urlPath}) => {
     return (
-        <div>
-            <div className="cursomers-list">
+            <div className="customer-list">
                 {
                     customers.map(item =>
                         <CustomerListItem
@@ -19,7 +20,6 @@ const CustomersList = ({customers, urlPath}) => {
                     ) 
                 }
             </div>
-        </div>
     );
 };
 
@@ -28,4 +28,4 @@ CustomersList.propTypes = {
     urlPath: PropTypes.string.isRequired,
 };
 
-export default CustomersList;
+export default accessControl([CUSTOMER_LIST])(CustomersList);
